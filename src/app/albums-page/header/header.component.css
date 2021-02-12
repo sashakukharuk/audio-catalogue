@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 10px 3px rgba(0,0,0,.4);
+}
+
+.header__btn {
+  padding: 20px 40px 20px 40px;
+}
+
+.header__btn button {
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  height: 50px;
+  background-color: #1a1a1a;
+  outline: none;
+  border: none;
+}
+
+.header__btn button:hover {
+  color: blue;
+}
+
+.header__search {
+  margin-top: 15px;
+  border-radius: 14px;
+  border: white solid 4px;
+  height: 50px;
+}
+
+.header__search input {
+  font-size: 30px;
+  border-radius: 8px;
+  width: 356px;
+  height: 80%;
+  outline: none;
+  border: white solid 4px;
+}
+
+.header__search input:focus {
+  border: blue solid 4px;
+}
+
+.header__like {
+  padding: 16px 50px 0 0;
+  width: 100%;
+  text-align: right;
+  position: relative;
+}
+
+.header__like__icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 63px;
+  top: 27px;
+}
+
+.header__like__count {
+  position: absolute;
+  top: 24px;
+  right: 59px;
+  color: white;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background-color: blue;
+  border-radius: 13px;
+}

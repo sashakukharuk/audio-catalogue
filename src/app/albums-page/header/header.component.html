@@ -1,0 +1,16 @@
+<div class="header">
+  <div class="header__btn">
+    <button [routerLink]="['/']">Back</button>
+  </div>
+  <div class="header__search">
+    <label for="search"></label><input type="text" id="search" [(ngModel)]="search" (change)="onChange()"/>
+  </div>
+  <div class="header__like">
+    <div class="header__like__icon">
+      <app-icon-svg [active]="true"></app-icon-svg>
+    </div>
+    <div class="header__like__count">
+      <span>{{likes}}</span>
+    </div>
+  </div>
+</div>

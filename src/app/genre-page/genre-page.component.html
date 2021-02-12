@@ -1,0 +1,7 @@
+<div class="genre">
+  <div class="genre__item item" *ngFor="let genre of genres" [routerLink]="['/genre', genre.name]">
+    <h2 class="item__name">{{genre.name}}</h2>
+    <img class="item__img" src="{{genre.img}}"
+         alt="genre">
+  </div>
+</div>

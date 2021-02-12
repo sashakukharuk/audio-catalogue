@@ -1,0 +1,15 @@
+.info__icon {
+  width: 100%;
+  height: 100%;
+}
+
+.info__icon path {
+  fill: #262626;
+  stroke-width: 20;
+  stroke: white;
+}
+
+.info__icon-is-active-true path {
+  fill: white;
+  stroke: white;
+}

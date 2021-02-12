@@ -1,0 +1,12 @@
+<div class="header">
+  <app-header (onSearch)="applySearch($event)"></app-header>
+</div>
+<div class="albums">
+  <div class="albums__card card" *ngFor="let album of albums" (click)="saveAlbum(album)">
+    <div class="card__info info">
+      <app-card-album [active]="album.like" [albumName]="album.name" [artistName]="album.artist.name" [image]="album.image[2]['#text']"></app-card-album>
+      <app-message *ngIf="this.albumsLiked && this.album.name === this.albumsLiked" [nameArtist]="album.artist.name" [album]="album.name" ></app-message>
+    </div>
+  </div>
+</div>
+
