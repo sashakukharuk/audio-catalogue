@@ -1,6 +1,10 @@
 {
   "name": "audio-catalogue",
   "version": "0.0.0",
+  "engines": {
+    "node": "12.18.2",
+    "npm": "6.14.5"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
