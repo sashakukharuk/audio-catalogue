@@ -22,9 +22,16 @@
   position: relative;
 }
 
+@media (max-width: 780px) {
+  .albums__card {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 @media (max-width: 625px) {
   .albums__card {
-    width: 178px;
-    height: 178px;
+    width: 200px;
+    height: 200px;
   }
 }
