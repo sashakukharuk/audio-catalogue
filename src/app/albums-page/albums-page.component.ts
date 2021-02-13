@@ -64,7 +64,6 @@ export class AlbumsPageComponent implements OnInit, OnDestroy, AfterContentCheck
   }
   applySearch(search: string): void {
     const foundAlbum = this.logicAlbums.searchObjects(search, this.albums);
-    debugger
     foundAlbum.length !== 0 ? this.albums = foundAlbum : this.requestData();
   }
 }
