@@ -36,3 +36,26 @@
 .item__img:hover {
   opacity: .5;
 }
+
+@media (max-width: 1600px) {
+  .genre {
+    width: 940px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .genre {
+    width: 100%;
+    position: relative;
+    right: 50%;
+    transform: translate(50%);
+    text-align: center;
+  }
+}
+
+@media (max-width: 625px) {
+  .genre__item {
+    width: 225px;
+    height: 150px;
+  }
+}

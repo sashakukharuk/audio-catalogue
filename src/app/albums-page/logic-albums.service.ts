@@ -45,9 +45,9 @@ export class LogicAlbumsService {
     return this.getQuantityLike();
   }
   setObjectLiked(name: string): void {
-    new Promise(async (resolve) => {
+    new Promise( (resolve) => {
       this.name = name;
-      const sub = await setTimeout(() => {
+      const sub = setTimeout(() => {
         this.name = null;
         resolve(sub);
       }, 1000);

@@ -35,7 +35,7 @@
   font-size: 30px;
   border-radius: 8px;
   width: 356px;
-  height: 80%;
+  height: 43px;
   outline: none;
   border: white solid 4px;
 }
@@ -69,4 +69,24 @@
   height: 25px;
   background-color: blue;
   border-radius: 13px;
+}
+
+@media (max-width: 630px) {
+  .header {
+    display: block;
+  }
+  .header__search {
+    margin: 15px auto;
+    width: 364px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__search {
+    margin: 15px auto;
+    width: 182px;
+  }
+  .header__search input {
+    width: 174px;
+  }
 }
