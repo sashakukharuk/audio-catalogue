@@ -54,11 +54,7 @@ export class AlbumsPageComponent implements OnInit, OnDestroy, AfterContentCheck
     } else {
       this.filter = albums;
       this.albums.forEach((item) => {
-        this.filter = this.filter.filter(album => {
-          if (album.name !== item.name) {
-            return album;
-          }
-        });
+        this.filter = this.filter.filter(album => album.name !== item.name && album);
       });
       return this.albums.reverse().concat(this.filter);
     }
@@ -68,6 +64,7 @@ export class AlbumsPageComponent implements OnInit, OnDestroy, AfterContentCheck
   }
   applySearch(search: string): void {
     const foundAlbum = this.logicAlbums.searchObjects(search, this.albums);
+    debugger
     foundAlbum.length !== 0 ? this.albums = foundAlbum : this.requestData();
   }
 }

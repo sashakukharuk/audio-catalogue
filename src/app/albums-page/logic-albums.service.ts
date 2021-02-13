@@ -55,25 +55,14 @@ export class LogicAlbumsService {
       clearTimeout(res);
     });
   }
-  searchObjects(search: string, objects: AlbumInterface[]): AlbumInterface[] {
-    const result = [];
-    let iteration = 0;
-    const searchArr = search.split('');
-    searchArr[0] = searchArr[0].toUpperCase();
-    objects.forEach(item => {
-      searchArr.forEach((str, index) => {
-        if (item.name[index] === str) {
-          iteration = ++iteration;
-          if (iteration === searchArr.length) {
-            result.push(item);
-            iteration = 0;
-          }
-        } else {
-          iteration = 0;
-        }
-      });
-    });
-    return result;
+  searchObjects(search: string, arrObj: AlbumInterface[]): AlbumInterface[] {
+    return arrObj
+      .reduce((acum, item) => {
+        search
+          .split('')
+          .forEach((str, index) => item.name[index] === str && index === str.split('').length + 1 && acum.push(item));
+        return acum;
+      } , []);
   }
   getItemFromStorage(key: string): string {
     return localStorage.getItem(`${key}`);
